@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fc" />
+  <meta name="description" content="A thoughtful, AI-powered customer support assistant grounded in your help center." />
+  <title>Clarity — AI Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-icon">✳</div><span>clarity<span class="brand-dot">.</span></span></div>
+      <div class="sidebar-label">WORKSPACE</div>
+      <button class="nav-item selected" type="button"><span class="nav-ico">◈</span> AI Assistant <span class="nav-active"></span></button>
+      <button class="nav-item" id="helpNav" type="button"><span class="nav-ico">▤</span> Help center</button>
+      <div class="sidebar-label recent-label">CONVERSATION</div>
+      <button class="new-chat" id="newChat" type="button"><span>＋</span> New conversation</button>
+      <div class="sidebar-bottom">
+        <div class="side-promo"><div class="promo-spark">✧</div><strong>Support, simplified.</strong><p>Helpful answers, grounded in our knowledge base.</p><span>POWERED BY GEMINI ✦</span></div>
+        <div class="sidebar-user"><div class="avatar">C</div><div><strong>Customer Support</strong><small>AI workspace</small></div><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar"><div class="mobile-brand">✳ clarity.</div><div class="breadcrumbs">Workspace <span>/</span> <strong>AI Assistant</strong></div><div class="top-right"><span class="live-dot"></span><span>AI assistant</span><span class="top-divider"></span><button class="top-icon" id="resetBtn" title="Start new chat" aria-label="Start new chat">↻</button></div></header>
+      <section class="chat-scroll" id="chatScroll" aria-label="Chat messages">
+        <div class="welcome" id="welcome">
+          <div class="welcome-mark"><span>✳</span></div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR SUPPORT COMPANION</div>
+          <h1>Hi there, how can<br />we <em>help you</em> today?</h1>
+          <p class="welcome-subtitle">Ask anything about orders, shipping, returns, or payments.<br class="desktop-break" /> We're here to make things a little easier.</p>
+          <div class="suggestion-heading"><span>✦</span> SOME THINGS YOU CAN ASK</div>
+          <div class="suggestions">
+            <button class="suggestion" data-question="What is your return policy?"><span class="suggestion-icon lavender">↩</span><span><strong>Returns & refunds</strong><small>What is your return policy?</small></span><span class="suggestion-arrow">↗</span></button>
+            <button class="suggestion" data-question="How long does shipping take?"><span class="suggestion-icon peach">▣</span><span><strong>Shipping & delivery</strong><small>How long does shipping take?</small></span><span class="suggestion-arrow">↗</span></button>
+            <button class="suggestion" data-question="How can I track my order?"><span class="suggestion-icon mint">⌖</span><span><strong>Track an order</strong><small>Where can I find my tracking link?</small></span><span class="suggestion-arrow">↗</span></button>
+            <button class="suggestion" data-question="What payment methods do you accept?"><span class="suggestion-icon blue">▤</span><span><strong>Payment options</strong><small>Which payment methods can I use?</small></span><span class="suggestion-arrow">↗</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+      <footer class="composer-area">
+        <div class="composer" id="composer"><textarea id="questionInput" rows="1" maxlength="1000" placeholder="Ask me anything about your order..." aria-label="Ask a customer support question"></textarea><div class="composer-bottom"><div class="composer-hint"><span class="sparkle">✦</span> Powered by AI <span class="hint-separator">·</span> Answers from our help center</div><button class="send-btn" id="sendBtn" aria-label="Send message" title="Send message">➤</button></div></div>
+        <div class="footer-note"><span>✧</span> Clarity AI can make mistakes. Please verify important information. <span class="footer-shortcut">↵ Enter to send</span></div>
+      </footer>
+    </main>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
